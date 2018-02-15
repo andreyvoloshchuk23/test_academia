@@ -73,6 +73,7 @@
 		transform: translateY(0)	
 		position: static
 		margin-bottom: 30px
+		display: block
 .categories__item
 	width: 30px
 	height: 540px
@@ -107,11 +108,13 @@
 	float: right
 	background-color: #000
 	overflow: hidden
-	+clr
-	+r(1260)
-		width: 100%	
+	+clr	
+	+r(1260)	
+		float: none
+		width: 100%
 .content
-	float: left
+	float: right
+	+clr
 	+r(720)
 		width: 100%		
 .content__caption

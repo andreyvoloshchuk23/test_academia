@@ -5,6 +5,10 @@ $(document).ready(function() {
     	 $('.info__text').css({'top': '70px', 'text-align': 'center'});
     	 $('.info').css({'opacity': '0','z-index': '-1'});
     }
+    else if ($(window).width() < 960) {$('.info__text').css('top', '120px');
+    				$('.info').height($('.content').height());
+    				$('.info').css({'opacity': '1','z-index': '1'});
+    }
     else{ $('.info').height($('.content').height());
     			$('.info__text').css({'top': '200px', 'text-align': 'left'});
     			$('.info').css({'opacity': '1','z-index': '1'});
@@ -29,7 +33,7 @@ $(document).ready(function() {
   		linksWidth.push($(this).width());	
   	});
   	$('.line').each(function() {
-  		$(this).width($('.main').width() -$('.info').width() - linksWidth[counter] - 35);
+  		$(this).width($('.content__list').width() - linksWidth[counter] - 35);
   		counter++;
   	});
   	if ($(window).width() < 720) {$('.line').css('display', 'none');}
