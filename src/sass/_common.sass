@@ -1,0 +1,73 @@
++font(Casper, Casper)
++font(Casper-Bold, Casper-Bold)
++font(FuturaPT-Bold, FuturaPT-Bold)
++font(FuturaPT-Demi, FuturaPT-Demi)
+
+$gold: #f6cb02	
+
+body
+	box-sizing: border-box
+	overflow: hidden
+.center
+	width: 83%
+	margin: 0 auto
+	padding: 90px 0 100px 0
+	background-image: url('../img/bgi_big.jpg')
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	+r(1420)
+		width: 95%
+	+r(1260)
+		padding: 30px 0	
+.wrap
+	background-image: url('../img/bgi.png')
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	position: relative
+	+clr
+.line
+	display: block
+	height: 7px
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: 0px
+	background-color: $gold
+	opacity: 0
+	transition: .3s ease all
+.show
+	opacity: 1 !important
+.active
+	color: $gold !important
+.hidden
+	display: none		
+.menu
+	width: 50px
+	height: 50px
+	border: 1px solid $gold
+	border-radius: 5px
+	position: absolute
+	right: 10px
+	top: 10px	
+	cursor: pointer
+	z-index: 2
+	span
+		display: block
+		width: 80%
+		height: 3px
+		background-color: $gold
+		margin: 10px auto
+		transition: .4s ease-in all
+	span.open:nth-child(1)
+		transform: rotate(45deg)
+		position: relative
+		top: 13px
+	span.open:nth-child(2)
+		transform: rotate(-45deg)
+	span.open:nth-child(3)
+		transform: rotate(180deg)
+		opacity: 0						
+.dark:before
+	display: block	!important
+.container
+	background-color: #161616	
